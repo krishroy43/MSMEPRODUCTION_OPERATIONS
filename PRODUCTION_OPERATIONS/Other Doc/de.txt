@@ -1,0 +1,105 @@
+PRODUCTION_OPERATIONS_POQC_PO_104
+
+
+
+
+Location Code must have a value in Item Journal Line: Journal Template Name=PROD. ORDE, Journal Batch Name=D365ADMIN, Line No.=110000. It cannot be zero or empty.
+
+
+
+
+
+
+OnAfterInsertConsumptionJnlLine(ItemJnlLine);     CU5510
+OnAfterInsertConsumptionJnlLine(ItemJnlLine);
+
+ OnBeforeInsertOutputJnlLine(ItemJnlLine,ProdOrderRtngLine,ProdOrderLine);
+
+
+
+OnBeforeInsertOutputJnlLine(ItemJnlLine,ProdOrderRtngLine,ProdOrderLine);
+
+
+
+OnAfterSetTemplateAndBatchName(ItemJnlTemplate,User);
+
+
+
+101003
+
+
+Microsoft Dynamics 365 Business Central
+---------------------------
+
+Production Order 101003  with status Planned has been changed to Production Order 101006 with status Released.
+---------------------------
+OK
+---------------------------
+
+
+Prod. Order Status Management
+
+
+OnAfterUpdateProdOrderLine
+
+
+
+
+OnAfterInsertItemLedgEntry 22
+
+OnBeforeInsertItemLedgEntry  22
+
+ CODEUNIT.RUN(CODEUNIT::"Item Jnl.-Post",Rec);
+Item Jnl.-Post Batch
+
+
+
+
+
+
+
+[EventSubscriber(ObjectType::<Event Publisher Object Type>, <Event Publisher Object>, '<Published Event Name>', '<Published Event Element Name>', <SkipOnMissingLicense>, <SkipOnMissingPermission>)]
+
+
+OnAfterProdOrderLineInsert - CU 99000787
+OnAfterInitProdOrderLine
+
+Firm Planned Prod. Order
+
+Planned Production Order
+
+Released Production Order
+
+Finished Production Order
+
+
+
+
+Released Production Order	99000831
+
+Released Prod. Order Lines	99000832
+
+
+Planned Production Order	99000813
+
+Planned Prod. Order Lines	99000814
+
+Finished Production Order	99000867
+
+Finished Prod. Order Lines	99000868
+
+Firm Planned Prod. Order	99000829
+
+Firm Planned Prod. Order Lines	99000830
+
+
+
+
+
+EXT_PAGE_ReleasedProductionOrder_99000831
+EXT_PAGE_ReleasedProdOrderLines_99000832
+
+EXT_PAGE_PlannedProductionOrder_99000813
+EXT_PAGE_PlannedProdOrderLines_99000814
+EXT_PAGE_FinishedProductionOrder_99000867
+EXT_PAGE_FinishedProdOrderLines_99000868
